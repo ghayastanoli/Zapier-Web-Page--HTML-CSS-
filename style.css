@@ -1,0 +1,225 @@
+@font-face {
+    font-family: 'DegularDisplay'; /* Name of the font */
+    src: url('./fonts/fonnts.com-DegularDisplayDemo-Regular.otf') format('opentype');
+    
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  inter, sans-serif;
+}
+
+
+.nav-container{
+    width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.z-logo{
+    height: 60px;
+}
+
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border-bottom: 1px solid #ece9df;
+
+}
+.nav-list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+.nav-list a{
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    line-height: 16px;
+
+}
+.left-nav{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.sign-up-btn{
+    padding: 10px 22px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    background: #ff4f00;
+    font-weight: 700;
+}
+
+.section2{
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.hero{
+    display: flex;
+    justify-content: space-between;
+    padding: 66px 86px;
+}
+.hero-btn{
+    display: flex;
+}
+.hero-left h1{
+    font-family: DegularDisplay;
+    font-size: 100px;
+    line-height: 0.8;
+    font-weight: bold;
+    color: #201515;
+    padding: 30px 0px;
+}
+.hero-left p{
+    font-size: 21px;
+    color: #201515;
+}
+.hero-img{
+    height: 528px;
+}
+.hero-btn-container{
+    display: flex;
+    align-items: center;
+    background-color: rgba(240, 241, 250, 1);
+    width: 55%;
+    padding: 7px 14px;
+    border-radius: 20px;
+}
+.hero-btn-container a{
+    text-decoration: none;
+    color: #201515;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 5px 11px;
+}
+.hero-btn{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 3px 8px;
+    margin-top: 4px;
+}
+.hero-btn-container ion-icon{
+    padding-bottom: -2px;
+}
+.hero-b-btn-container{
+    display: flex;
+    padding: 55px 0px;
+    gap: 12px;
+}
+.google-btn{
+    display: flex;
+}
+.first-btn{
+    padding: 15px 60px;
+    border: none;
+    background-color: #ff4f00;
+    border-radius: 29px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.first-btn p{
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+.second-btn{
+    padding: 15px 60px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 29px;
+    display: flex;
+    align-items: center;
+    padding: 8px 40px;
+    cursor: pointer;
+}
+.second-btn p{
+    font-size: 16px;
+    font-weight: 700;
+
+}
+
+/* .section3{
+    width: 1350px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.ser-cards{
+    display: flex;
+}
+
+.card1 img{
+    height: 245px;
+    width: 255px;
+} */
+
+
+.sec-5-bg{
+    background-color: rgba(230, 241, 237, 1);
+}
+
+.sec-5-content{
+    padding: 120px 0;
+}
+.sec-5-text h2{
+    text-align: center;
+    font-family: DegularDisplay;
+    font-size: 70px;
+}
+.sec-5-text p{
+    text-align: center;
+    font-family: inter;
+    font-size: 24px;
+    padding: 40px 0;
+}
+
+.video-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    
+}
+.sec-5-p{
+    text-align: center;
+    font-size: 20px;
+    font-family: inter;
+    padding: 30px 0;
+}
+
+/* Button styles */
+.v-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #1f3121;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.v-btn:hover {
+    background-color: #0056b3;
+}
+
+#videoPlayer{
+    background-color: white;
+    padding: 20px;
+}
