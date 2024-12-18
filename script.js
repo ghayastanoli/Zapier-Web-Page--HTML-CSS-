@@ -1,58 +1,11 @@
-// var swiper = new Swiper('.swiper-jwp', {
-//    centeredSlides: true,
-//    slidesPerView: 'auto',
-//    longSwipesMs: 0,
-//   loopPreventsSlide:false,
-//    longSwipes: true,
-//    longSwipesRatio: 0,
-//    threshold: 0,
-//    slideToClickedSlide:true,
-//    speed: 900,
-//    loop: true,
-//    loopedSlides:2,
-//    spaceBetween: 20,
-//    keyboard: {
-//    enabled: true,
-//    onlyInViewport: true,
-// },
-//    grabCursor: true,
-//    pagination: {
-//       el: '.swiper-pagination',
-//       type: 'fraction',
-//     },
-
-//   formatFractionCurrent: function (number) {
-// if (number < 10) {
-// number = '0' + number;
-// }
-// return number;
-// },
-
-//  renderFraction: function (currentClass, totalClass) {
-//     return '<span class="' + currentClass + '"></span>' +
-//             ' of' +
-//             '<span class="' + totalClass + '"></span>';
-// },
-              
-
-//    navigation: {
-//       nextEl: '.swiper-button-next',
-//       prevEl: '.swiper-button-prev',
-//     },
-    
-// });
-
-
-// Function to change the video source
 function changeVideo(videoSrc) {
    const videoPlayer = document.getElementById("videoPlayer");
-   videoPlayer.src = videoSrc; // Update the video source
-   videoPlayer.play(); // Ensure the video starts playing
+   videoPlayer.src = videoSrc; 
+   videoPlayer.play(); 
 }
 
 
 
-// Content for each button
 const cardContent = {
    ai: [
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-01_wymtxj.png', title: 'Draft emails replies to customers', desc: 'Get started' },
@@ -97,12 +50,11 @@ const cardContent = {
 };
 
 
-// Function to load cards
 function loadCards(category) {
    const container = document.querySelector('.sec7-card-temp');
-   container.innerHTML = ''; // Clear previous content
+   container.innerHTML = ''; 
 
-   // Check if the category is AI
+
    const isAI = category === 'ai';
 
    cardContent[category].forEach(card => {
@@ -117,7 +69,6 @@ function loadCards(category) {
    });
 }
 
-// Event listener for buttons
 document.querySelectorAll('.v-btn2').forEach(button => {
    button.addEventListener('click', () => {
        document.querySelectorAll('.v-btn2').forEach(btn => btn.classList.remove('active'));
@@ -127,5 +78,18 @@ document.querySelectorAll('.v-btn2').forEach(button => {
    });
 });
 
-// Load default cards (AI Automation)
 loadCards('ai');
+
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
