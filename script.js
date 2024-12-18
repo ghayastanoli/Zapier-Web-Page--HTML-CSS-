@@ -57,10 +57,10 @@ const cardContent = {
    ai: [
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-01_wymtxj.png', title: 'Draft emails replies to customers', desc: 'Get started' },
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-02_yo6tko.png', title: 'Summarize sales calls using OpenAI', desc: 'Get started' },
-       { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-03_doscn6.png', title: 'Talk to leads 24/7 with a custom sales chatbot', desc: 'Get started' },
+       { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-03_doscn6.png', title: 'Talk to leads 24/7 with a custom sales chatbot', desc: 'Get started'  },
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-05_fb8my5.png', title: 'Supercharge your support with an AI-powered FAQ', desc: 'Get started' },
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172528/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-04_ymnvxx.png', title: 'Use AI to generate relevant content ideas', desc: 'Get started' },
-       { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172527/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-06_zooowf.png', title: 'Turn Slack messages into a prioritized task list ', desc: 'Get started' },
+       { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726172527/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/AI%20Automation/template-thumb_ai-automation-06_zooowf.png', title: 'Turn Slack messages into a prioritized task list ', desc: 'Get started'  },
    ],
    lead: [
        { img: 'https://res.cloudinary.com/zapier-media/image/upload/q_auto/f_auto/v1726130909/Homepage%20%E2%80%94%20Sept%202024/Templates%20thumbnails/LEAD%20MANAGEMENT/template-thumb_lead-management-01_jm9jym.png', title: 'Capture leads from multiple sources', desc: 'Get started' },
@@ -96,14 +96,20 @@ const cardContent = {
   ],
 };
 
+
 // Function to load cards
 function loadCards(category) {
    const container = document.querySelector('.sec7-card-temp');
    container.innerHTML = ''; // Clear previous content
+
+   // Check if the category is AI
+   const isAI = category === 'ai';
+
    cardContent[category].forEach(card => {
        container.innerHTML += `
            <div class="sec-7-card">
                <img src="${card.img}" alt="${card.title}">
+               ${isAI && card.logo ? `<img src="${card.logo}" alt="Logo" class="logo-img">` : ''}
                <h3>${card.title}</h3>
                <p>${card.desc}</p>
            </div>
